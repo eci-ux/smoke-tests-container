@@ -81,7 +81,7 @@ USER pptruser
 
 ENTRYPOINT ["dumb-init", "--"]
 
-ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait ./wait
-RUN chmod a+x ./wait
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /tests/wait
+RUN chmod u+x /tests/wait
 
-CMD ./wait && npm start
+CMD /tests/wait && npm start

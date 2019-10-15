@@ -11,7 +11,7 @@ jobs:
     - name: Publish to GitHub Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: eci-ux/somke-tests-container
+        name: eci-ux/somke-tests-container/somke-tests-container
         username: eci-ux
         password: ${{ secrets.GITHUB_TOKEN }}
         registry: docker.pkg.github.com

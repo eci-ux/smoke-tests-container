@@ -77,7 +77,7 @@ ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait
 RUN chmod +x /wait
   
 # Run everything after as non-privileged user.
-USER pptruser
+#USER pptruser
 
 # --cap-add=SYS_ADMIN
 # https://docs.docker.com/engine/reference/run/#additional-groups

@@ -1,0 +1,14 @@
+name: Publish Image
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Publish to GitHub Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: eci-ux/somke-tests-container
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        registry: docker.pkg.github.com

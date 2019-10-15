@@ -73,6 +73,9 @@ RUN mkdir /screenshots \
   && chown -R pptruser:pptruser /screenshots \
   && chown -R pptruser:pptruser /tests
 
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
+RUN chmod +x /wait
+  
 # Run everything after as non-privileged user.
 USER pptruser
 
@@ -81,7 +84,4 @@ USER pptruser
 
 ENTRYPOINT ["dumb-init", "--"]
 
-ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /tests/wait
-RUN chmod u+x /tests/wait
-
-CMD /tests/wait && npm start
+CMD /wait && npm start

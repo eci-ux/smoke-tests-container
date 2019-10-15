@@ -54,7 +54,8 @@ RUN yarn global add puppeteer@1.8.0 \
     && yarn global add chai@4.2.0 \
     && yarn global add mocha@6.1.4 \
     && yarn global add mockserver-client@5.5.4 \
-    && yarn global add uuid@3.3.2
+    && yarn global add uuid@3.3.2 \
+    && yarn global add mocha-image-reporter@1.1.0
 
 ENV NODE_PATH="/usr/local/share/.config/yarn/global/node_modules:${NODE_PATH}"
 

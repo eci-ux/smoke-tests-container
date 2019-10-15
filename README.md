@@ -4,10 +4,8 @@ Docker image for running the smoke tests with Puppeteer
 
 ## How to build the image
 ```
-export VERSION=v1 # can be a git tag
-
 docker build \
-  -t docker.pkg.github.com/eci-ux/smoke-tests-container/smoke-tests-container:$VERSION .
+  -t docker.pkg.github.com/eci-ux/smoke-tests-container/smoke-tests-container:latest .
 ```
 Every push on master will create a new image version with the latest tag automatically.
 
@@ -20,7 +18,7 @@ docker run \
   --rm \
   -v $PWD/my-smoke-tests:/tests \
   -w /tests \
-  docker.pkg.github.com/eci-ux/smoke-tests-container/smoke-tests-container:$VERSION
+  docker.pkg.github.com/eci-ux/smoke-tests-container/smoke-tests-container:latest
 ```
 
 ### With docker-compose

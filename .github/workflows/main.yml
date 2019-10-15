@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Publish to GitHub Registry
+    - name: Build and publish image to GitHub Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: eci-ux/somke-tests-container/somke-tests-container
+        name: eci-ux/smoke-tests-container/smoke-tests-container
         username: eci-ux
         password: ${{ secrets.GITHUB_TOKEN }}
         registry: docker.pkg.github.com

@@ -9,7 +9,7 @@ export VERSION=v1 # can be a git tag
 docker build \
   -t docker.pkg.github.com/eci-ux/smoke-tests-container/smoke-tests-container:$VERSION .
 ```
-Every push on master will create a new image version based on the latest tag automatically.
+Every push on master will create a new image version with the latest tag automatically.
 
 ## How to use
 
